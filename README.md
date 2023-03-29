@@ -12,11 +12,12 @@ participant Worker <<decides what to do>>
 collections Nodes
 
 Actor -> Component: Message
+
 group Important
-Component -> Queue: Publish message
-note right of Queue: Message\nis meaningful
-Queue -> Worker: Pick up message
-Worker -> Nodes: Do something
+  Component -> Queue: Publish message
+  note right of Queue: Message\nis meaningful
+  Queue -> Worker: Pick up message
+  Worker -> Nodes: Do something
 end
 ```
 
